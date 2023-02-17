@@ -1,0 +1,48 @@
+/** clothing list; 
+mens pants (5)
+womens pants (6)
+children pants (7)
+womens tops (8)
+mens tops (9)
+children tops (10)
+dog sweaters (11)
+crew necks (15)
+hoodies (18)
+bras (20)
+socks (14)
+sweat pants (19)
+hats (21)
+jackets (23)
+shorts (14)
+**/
+
+CREATE TABLE clothing (id INTEGER PRIMARY KEY, item TEXT, price INTEGER, inventory INTEGER, section TEXT);
+
+
+INSERT INTO clothing VALUES (1, "mens pants", 6.99, 2, "men's");
+INSERT INTO clothing VALUES (2, "crew necks", 3.99, 4, "sweaters");
+INSERT INTO clothing VALUES (3, "dog sweaters", 5.99, 5, "pets"); 
+INSERT INTO clothing VALUES (4, "children tops", 8.99, 8, "youth");
+INSERT INTO clothing VALUES (5, "jackets", 12.99, 9, "winter");
+INSERT INTO clothing VALUES (6, "womens pants", 3.45, 13, "womens");
+INSERT INTO clothing VALUES (7, "children pants", 2.99, 3, "children");
+INSERT INTO clothing VALUES (8, "womens tops", 4.99, 1, "womens");
+INSERT INTO clothing VALUES (9, "mens tops", 14.99, 6, "mens");
+INSERT INTO clothing VALUES (10, "hoodies", 18.99, 10, "pets");
+INSERT INTO clothing VALUES (11, "bras", 1.99, 15, "bras");
+INSERT INTO clothing VALUES (12, "socks", 4.45, 12, "socks");
+INSERT INTO clothing VALUES (13, "sweat pants", 15.20, 10, "comfy");
+INSERT INTO clothing VALUES (14, "hats", 4.00, 20, "hats");
+INSERT INTO clothing VALUES (15, "shorts", 6.00, 21, "summer");
+
+SELECT * FROM clothing;
+SELECT * FROM clothing ORDER BY price;
+SELECT MAX (price) FROM clothing GROUP BY section;
+SELECT section, MAX (price) FROM clothing GROUP BY section;
+
+
+
+
+
+
+
